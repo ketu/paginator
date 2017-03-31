@@ -1,0 +1,35 @@
+{
+    "name": "veda/paginator",
+    "description": "simple pager",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ketu",
+            "email": "ketu.lai@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/orm": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Veda\\Paginator\\": "src/Veda/Paginator/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Veda\\Paginator\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

@@ -4,10 +4,12 @@
  * Date: 17-3-31
  */
 
-namespace Veda\Paginator\Paginator;
+namespace Veda\Paginator;
 
 
-class AdapterInterface
+interface AdapterInterface
 {
+    public function total();
 
+    public function paginate();
 }
