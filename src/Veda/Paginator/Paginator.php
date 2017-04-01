@@ -23,10 +23,11 @@ class Paginator implements PaginatorInterface
 
         $options = array_merge($this->defaultOptions, $options);
 
-        $adapter = AdapterFactory::create($target);
+        $adapter = AdapterFactory::create($target, $limit, $offset, $options);
 
+        $adapter->paginate();
 
-        return new Page($adapter->total(), );
+        return new Page($adapter);
 
     }
 }

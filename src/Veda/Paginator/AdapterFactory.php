@@ -7,15 +7,15 @@
 namespace Veda\Paginator;
 
 use Doctrine\DBAL\Query\QueryBuilder;
-use Veda\Paginator\Adapter\Iterator as IteratorAdapter;
+use Veda\Paginator\Adapter\IterableItem as IteratorAdapter;
 use Veda\Paginator\Adapter\QueryBuilder as QueryBuilderAdapter;
 
 class AdapterFactory
 {
-    public static function create($target)
+    public static function create($target, $limit, $offset, $options)
     {
         if ( (is_array($target) || $target instanceof \Traversable)) {
-            return new IteratorAdapter($target);
+            return new IteratorAdapter($target,$limit, $offset, $options);
         } elseif($target instanceof QueryBuilder) {
             return new QueryBuilderAdapter($target);
         }

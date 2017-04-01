@@ -13,12 +13,28 @@ class Page implements \Countable, \Iterator #, \ArrayAccess
     private $items;
     private $currentPage;
     private $totalPage;
+    private $total;
+    private $limit;
+    private $offset;
 
-    public function __construct($currentPage, $totalPage, $items)
+    private $adapter;
+
+    public function __construct(AbstractAdapter $adapter)
     {
-        $this->items = $items;
-        $this->currentPage = $currentPage;
-        $this->totalPage = $totalPage;
+
+        $this->adapter = $adapter;
+
+        $this->items = $adapter->getItems();
+
+        $this->currentPage = $adapter->getCurrentPage();
+
+        $this->total = $adapter->getTotal();
+
+        $this->limit = $adapter->getLimit();
+
+        $this->offset = $adapter->getOffset();
+
+        $this->totalPage = $adapter->getTotalPage();
     }
 
     /**
@@ -75,5 +91,102 @@ class Page implements \Countable, \Iterator #, \ArrayAccess
     {
         return count($this->items);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getItems()
+    {
+        return $this->items;
+    }
+
+    /**
+     * @param mixed $items
+     */
+    public function setItems($items)
+    {
+        $this->items = $items;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrentPage()
+    {
+        return $this->currentPage;
+    }
+
+    /**
+     * @param mixed $currentPage
+     */
+    public function setCurrentPage($currentPage)
+    {
+        $this->currentPage = $currentPage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalPage()
+    {
+        return $this->totalPage;
+    }
+
+    /**
+     * @param mixed $totalPage
+     */
+    public function setTotalPage($totalPage)
+    {
+        $this->totalPage = $totalPage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * @param mixed $total
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLimit()
+    {
+        return $this->limit;
+    }
+
+    /**
+     * @param mixed $limit
+     */
+    public function setLimit($limit)
+    {
+        $this->limit = $limit;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOffset()
+    {
+        return $this->offset;
+    }
+
+    /**
+     * @param mixed $offset
+     */
+    public function setOffset($offset)
+    {
+        $this->offset = $offset;
+    }
+
 
 }

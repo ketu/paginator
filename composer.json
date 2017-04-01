@@ -1,6 +1,6 @@
 {
     "name": "veda/paginator",
-    "description": "simple pager",
+    "description": "simple PHP Paginator",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "doctrine/orm": "^2.5"
+
     },
     "autoload": {
         "psr-4": {

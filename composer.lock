@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1582ceb4152032e15d9b750016c94a42",
+    "content-hash": "d07b5f3f0bff0a97b408dc990610de03",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -72,7 +72,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-02-24T16:22:25+00:00"
+            "time": "2017-02-24 16:22:25"
         },
         {
             "name": "doctrine/cache",
@@ -536,17 +536,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "1aa02f9afcb374d7d3060f960fa8ce096bf71369"
+                "reference": "03b4397557549be8955e2211dd0b6a78aee2b1a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/doctrine/doctrine2/1aa02f9afcb374d7d3060f960fa8ce096bf71369.zip",
-                "reference": "1aa02f9afcb374d7d3060f960fa8ce096bf71369",
+                "url": "https://files.phpcomposer.com/files/doctrine/doctrine2/03b4397557549be8955e2211dd0b6a78aee2b1a2.zip",
+                "reference": "03b4397557549be8955e2211dd0b6a78aee2b1a2",
                 "shasum": ""
             },
             "require": {
-                "doctrine/cache": "~1.4",
-                "doctrine/collections": "~1.2",
+                "doctrine/annotations": "~1.2",
+                "doctrine/cache": "~1.5",
+                "doctrine/collections": "~1.3",
                 "doctrine/common": "^2.7.1",
                 "doctrine/dbal": ">=2.5-dev,<2.7-dev",
                 "doctrine/instantiator": "~1.0.1",
@@ -555,7 +556,7 @@
                 "symfony/console": "~2.5|~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.4",
+                "phpunit/phpunit": "^6.0",
                 "symfony/yaml": "~2.3|~3.0"
             },
             "suggest": {
@@ -607,7 +608,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-03-12T15:53:13+00:00"
+            "time": "2017-04-01T04:49:33+00:00"
         },
         {
             "name": "psr/log",
@@ -936,7 +937,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2017-03-05T19:02:22+00:00"
+            "time": "2017-03-05 19:02:22"
         },
         {
             "name": "phar-io/version",
@@ -1037,7 +1038,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2015-12-27T11:43:31+00:00"
+            "time": "2015-12-27 11:43:31"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1192,7 +1193,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-03-03T17:09:02+00:00"
+            "time": "2017-03-03 17:09:02"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1255,7 +1256,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-31T13:21:26+00:00"
+            "time": "2017-03-31 13:21:26"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1302,7 +1303,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03T07:40:28+00:00"
+            "time": "2016-10-03 07:40:28"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1392,7 +1393,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-03-07T15:42:04+00:00"
+            "time": "2017-03-07 15:42:04"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1441,7 +1442,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-03-07T07:36:57+00:00"
+            "time": "2017-03-07 07:36:57"
         },
         {
             "name": "phpunit/phpunit",
@@ -1449,12 +1450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b1868955e2d30a5a14e3e0dba060fd900c818fbe"
+                "reference": "e083cb6682159fcd7863464729211aae22c1818a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/b1868955e2d30a5a14e3e0dba060fd900c818fbe.zip",
-                "reference": "b1868955e2d30a5a14e3e0dba060fd900c818fbe",
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/e083cb6682159fcd7863464729211aae22c1818a.zip",
+                "reference": "e083cb6682159fcd7863464729211aae22c1818a",
                 "shasum": ""
             },
             "require": {
@@ -1465,6 +1466,7 @@
                 "ext-xml": "*",
                 "myclabs/deep-copy": "^1.3",
                 "phar-io/manifest": "^1.0.1",
+                "phar-io/version": "^1.0",
                 "php": "^7.0",
                 "phpspec/prophecy": "^1.7",
                 "phpunit/php-code-coverage": "^5.0",
@@ -1524,7 +1526,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-31T15:16:42+00:00"
+            "time": "2017-04-01T12:37:08+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1583,7 +1585,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2017-03-07T08:51:01+00:00"
+            "time": "2017-03-07 08:51:01"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1628,7 +1630,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2017-03-04T10:23:55+00:00"
+            "time": "2017-03-04 10:23:55"
         },
         {
             "name": "sebastian/comparator",
@@ -1692,7 +1694,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-03-07T07:07:51+00:00"
+            "time": "2017-03-07 07:07:51"
         },
         {
             "name": "sebastian/diff",
@@ -1744,7 +1746,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-03-07T07:26:53+00:00"
+            "time": "2017-03-07 07:26:53"
         },
         {
             "name": "sebastian/environment",
@@ -1794,7 +1796,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-03-07T12:59:58+00:00"
+            "time": "2017-03-07 12:59:58"
         },
         {
             "name": "sebastian/exporter",
@@ -1861,7 +1863,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-03-07T07:32:56+00:00"
+            "time": "2017-03-07 07:32:56"
         },
         {
             "name": "sebastian/global-state",
@@ -1912,7 +1914,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-03-07T07:33:59+00:00"
+            "time": "2017-03-07 07:33:59"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -1959,7 +1961,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2017-03-12T15:17:29+00:00"
+            "time": "2017-03-12 15:17:29"
         },
         {
             "name": "sebastian/object-reflector",
@@ -2004,7 +2006,7 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
-            "time": "2017-03-29T09:07:27+00:00"
+            "time": "2017-03-29 09:07:27"
         },
         {
             "name": "sebastian/recursion-context",
@@ -2057,7 +2059,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2017-03-07T15:09:59+00:00"
+            "time": "2017-03-07 15:09:59"
         },
         {
             "name": "sebastian/resource-operations",
@@ -2099,7 +2101,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2016-10-03T07:43:09+00:00"
+            "time": "2016-10-03 07:43:09"
         },
         {
             "name": "sebastian/version",
@@ -2142,7 +2144,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2016-10-03T07:35:21+00:00"
+            "time": "2016-10-03 07:35:21"
         },
         {
             "name": "webmozart/assert",
@@ -2192,7 +2194,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23T20:04:41+00:00"
+            "time": "2016-11-23 20:04:41"
         }
     ],
     "aliases": [],

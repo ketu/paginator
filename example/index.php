@@ -41,4 +41,66 @@ $data = [
     ]
 ];
 
-$paginator->paginate($data, 1, 3);
+class MyIterator implements Iterator
+{
+    private $var = array();
+
+    public function __construct($array)
+    {
+        if (is_array($array)) {
+            $this->var = $array;
+        }
+    }
+
+    public function rewind()
+    {
+
+        reset($this->var);
+    }
+
+    public function current()
+    {
+        $var = current($this->var);
+
+        return $var;
+    }
+
+    public function key()
+    {
+        $var = key($this->var);
+
+        return $var;
+    }
+
+    public function next()
+    {
+        $var = next($this->var);
+
+        return $var;
+    }
+
+    public function valid()
+    {
+        $key = key($this->var);
+        $var = ($key !== NULL && $key !== FALSE);
+
+        return $var;
+    }
+
+}
+
+$values = array(1,2,3,6,58,99,777);
+$it = new MyIterator($values);
+
+
+$pagination = $paginator->paginate($it, 1, 3);
+echo  '..................';
+echo $pagination->getTotalPage();
+echo '............';
+echo $pagination->getTotal();
+
+foreach($pagination->getItems() as $item) {
+
+        var_dump($item);
+
+}

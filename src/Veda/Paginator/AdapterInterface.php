@@ -9,7 +9,5 @@ namespace Veda\Paginator;
 
 interface AdapterInterface
 {
-    public function total();
-
     public function paginate();
 }

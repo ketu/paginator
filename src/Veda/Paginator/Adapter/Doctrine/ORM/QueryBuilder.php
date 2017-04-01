@@ -10,19 +10,6 @@ use Veda\Paginator\AdapterInterface;
 
 class QueryBuilder implements AdapterInterface
 {
-    private $target;
-
-    public function __construct($target)
-    {
-        $this->target = $target;
-    }
-
-    public function total()
-    {
-
-    }
-
-
     public function paginate()
     {
         // TODO: Implement paginate() method.
