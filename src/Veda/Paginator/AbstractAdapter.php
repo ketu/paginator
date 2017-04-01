@@ -11,7 +11,7 @@ abstract class AbstractAdapter
 {
     protected $target;
     protected $total;
-    protected $items;
+    protected $items = [];
     protected $limit;
     protected $offset;
     protected $options;
