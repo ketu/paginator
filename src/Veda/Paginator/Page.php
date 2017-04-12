@@ -7,7 +7,7 @@
 namespace Veda\Paginator;
 
 
-class Page implements \Countable, \Iterator #, \ArrayAccess
+class Page implements \Countable, \Iterator
 {
 
     private $items;
@@ -17,13 +17,9 @@ class Page implements \Countable, \Iterator #, \ArrayAccess
     private $limit;
     private $offset;
 
-    private $adapter;
-
     public function __construct(AbstractAdapter $adapter)
     {
-
-        $this->adapter = $adapter;
-
+       
         $this->items = $adapter->getItems();
 
         $this->currentPage = $adapter->getCurrentPage();
