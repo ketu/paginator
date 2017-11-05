@@ -6,20 +6,21 @@
 
 namespace Veda\Paginator;
 
-use Veda\Paginator\AdapterFactory;
-
 class Paginator implements PaginatorInterface
 {
 
     private $defaultOptions = [];
 
-    public function paginate($target, $page = 1, $limit = 10, array $options = array())
+    public function paginate($target, int $offset = 0, int $limit = 10, array $options = array())
     {
         $limit = intval(abs($limit));
         if (!$limit) {
             throw new \InvalidArgumentException("Invalid item per page number, must be a positive number");
         }
-        $offset = abs($page - 1) * $limit;
+        if ($offset < 0) {
+            throw new \InvalidArgumentException("Invalid offset, must be a positive number");
+        }
+        //$offset = abs($page - 1) * $limit;
 
         $options = array_merge($this->defaultOptions, $options);
 

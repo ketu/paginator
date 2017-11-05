@@ -9,5 +9,5 @@ namespace Veda\Paginator;
 
 interface PaginatorInterface
 {
-    public function paginate($target, $page = 1, $limit = 10, array $options = array());
+    public function paginate($target, int $offset = 0, int $limit = 10, array $options = array());
 }
